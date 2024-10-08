@@ -13,7 +13,7 @@
 
 # Méthode pour déterminer si un nombre est premier
 
-def is_prime(n):
+def is_prime(n: int):
     if n < 2:  # 0 et 1 ne sont pas premiers
         return False # On retourne faux
     for i in range(2, int(n**0.5) + 1):  # On vérifie jusqu'à la racine carrée de n grâce à eratosthène
@@ -23,7 +23,7 @@ def is_prime(n):
 
 # Méthode pour convertir un nombre en binaire
 
-def to_binary(n): 
+def to_binary(n: int): 
     if n == 0: # Si n est 0
         return "0"  # 0 en binaire est 0
     binary_digits = [] # On crée un tableau vide pour stocker les chiffres binaires
@@ -34,7 +34,7 @@ def to_binary(n):
 
 # Méthode pour déterminer la nature d'un nombre pernicieux
 
-def is_pernicious(n):
+def is_pernicious(n: int):
     # Convertit le nombre en binaire et compte le nombre de '1'
     count_of_ones = to_binary(n).count('1') # On compte le nombre de '1' dans la représentation binaire
     # Vérifie si ce nombre est premier
